@@ -1,0 +1,32 @@
+@keyframes slideUpFromBottom {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.landing-image-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.landing-img {
+    width: 100%;
+}
+
+.landing-image-text {
+    position: absolute;
+    font-size: 7vw;
+    color: #ffffff;
+    top: 70%;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    animation: 1.5s ease-out 0.5s 1 slideUpFromBottom forwards;
+}

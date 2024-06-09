@@ -1,0 +1,38 @@
+.header-wrapper {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: yellow;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    padding-right: 10%;
+    border-bottom: 2px solid black;
+}
+
+.uka-logo {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    outline: 2px solid red;
+}
+
+.uka-logo:hover {
+    cursor: pointer;
+}
+
+.header-button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    outline: 1px solid red;
+    padding: 10px 40px;
+    background-color: #050505;
+}
+
+.header-button:hover {
+    cursor:pointer;
+    background-color: orange;
+    color: black;
+
+}
