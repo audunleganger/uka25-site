@@ -1,0 +1,13 @@
+.countdown-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    outline: 1px solid red;
+    font-family: "Comic Sans";
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.countdown-wrapper * {
+    font-family: inherit;
+}
