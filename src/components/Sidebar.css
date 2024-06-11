@@ -1,0 +1,17 @@
+.sidebar {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    padding-top: 5em;
+    border-left: 2px solid black;
+}
+
+.sidebar-button {
+    font-size: 2em;
+    border: 2px solid black;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    background-color: transparent;
+}

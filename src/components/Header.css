@@ -1,38 +1,36 @@
-.header-wrapper {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: yellow;
+.burger-wrapper {
+    padding: 10px;
+    position: absolute;
+    z-index: 2;
+    top: 0.3em;
+    right: 0.2em;
+    border-radius: 50%;
+    display: flex;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.burger {
+    z-index: 2;
+    font-size: 3em;
+}
+
+.sidebar {
+    height: 100%;
     position: fixed;
-    width: 100%;
     z-index: 1;
-    padding-right: 10%;
-    border-bottom: 2px solid black;
+    right: 0;
+    padding-top: 5em;
+    background-color: #FFCE00;
 }
 
-.uka-logo {
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-    outline: 2px solid red;
-}
-
-.uka-logo:hover {
-    cursor: pointer;
-}
-
-.header-button {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    outline: 1px solid red;
-    padding: 10px 40px;
-    background-color: #050505;
-}
-
-.header-button:hover {
-    cursor:pointer;
-    background-color: orange;
+.sidebar-enabled {
+    right: 0;
     color: black;
+}
 
+.sidebar-disabled {
+    right: -100%;
+    color: white;
 }
