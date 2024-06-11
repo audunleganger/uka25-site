@@ -13,8 +13,8 @@ export default function Header() {
 
     return (
         <div className="header-wrapper">
-            <div className="burger-wrapper">
-                <FiMenu className="burger" onClick={handleBurgerClick} />
+            <div className="burger-wrapper" onClick={handleBurgerClick}>
+                <FiMenu className="burger" />
             </div>
             <Sidebar
                 className={
