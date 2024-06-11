@@ -1,38 +1,52 @@
-.header-wrapper {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: yellow;
+.burger-wrapper {
+    padding: 10px;
     position: fixed;
-    width: 100%;
-    z-index: 1;
-    padding-right: 10%;
-    border-bottom: 2px solid black;
+    z-index: 4;
+    top: 0.3em;
+    right: 0.2em;
+    border-radius: 50%;
+    display: flex;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
-.uka-logo {
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-    outline: 2px solid red;
+.burger {
+    font-size: 3em;
 }
 
-.uka-logo:hover {
-    cursor: pointer;
+.sidebar {
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    padding-top: 5em;
+    background-color: rgba(255, 206, 0, 0.9);
+    transition: right 0.5s ease-in-out;
 }
 
-.header-button {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    outline: 1px solid red;
-    padding: 10px 40px;
-    background-color: #050505;
-}
-
-.header-button:hover {
-    cursor:pointer;
-    background-color: orange;
+.sidebar-enabled {
+    right: 0;
     color: black;
+}
 
+.sidebar-disabled {
+    right: -17em;
+    color: white;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.overlay-enabled {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-disabled {
+    background-color: rgba(0, 0, 0, 0);
 }
