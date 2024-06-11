@@ -17,7 +17,12 @@ export default function CountdownTimer() {
         const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-        return `${days} dager, ${hours} t, ${minutes} m, ${seconds}s`;
+        const daysString = days < 10 ? `0${days}` : `${days}`;
+        const hoursString = hours < 10 ? `0${hours}` : `${hours}`;
+        const minutesString = minutes < 10 ? `0${minutes}` : `${minutes}`;
+        const secondsString = seconds < 10 ? `0${seconds}` : `${seconds}`;
+
+        return `${daysString} ${hoursString} ${minutesString} ${secondsString}`;
     };
 
     // Set the final time for the countdown timer to monday 19. august 2024 at 00:00:00
@@ -39,13 +44,36 @@ export default function CountdownTimer() {
     }, []);
 
     return (
-        <div className="countdown-wrapper">
+        <section className="countdown-wrapper">
             <h1 className="countdown-timer-header">
                 Tid igjen før MiniUKA 2025
             </h1>
             <div className="timer-field">
-                <div className="timer-text">{`${timeLeftString}`}</div>
+                <div className="time-unit">
+                    <span className="time-value">
+                        {timeLeftString.split(" ")[0]}
+                    </span>
+                    <span className="time-label">Dager</span>
+                </div>
+                <div className="time-unit">
+                    <span className="time-value">
+                        {timeLeftString.split(" ")[1]}
+                    </span>
+                    <span className="time-label">Timer</span>
+                </div>
+                <div className="time-unit">
+                    <span className="time-value">
+                        {timeLeftString.split(" ")[2]}
+                    </span>
+                    <span className="time-label">Minutter</span>
+                </div>
+                <div className="time-unit">
+                    <span className="time-value">
+                        {timeLeftString.split(" ")[3]}
+                    </span>
+                    <span className="time-label">Sekunder</span>
+                </div>
             </div>
-        </div>
+        </section>
     );
 }
