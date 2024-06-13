@@ -1,6 +1,7 @@
 import LandingImage from "../../components/LandingImage";
 import Header from "../../components/Header";
 import CountdownTimer from "../../components/CountdownTimer";
+import ProgramField from "../../components/ProgramField";
 
 function HomePage() {
     return (
@@ -8,6 +9,7 @@ function HomePage() {
             <Header />
             <LandingImage />
             <CountdownTimer />
+            <ProgramField />
         </>
     );
 }
