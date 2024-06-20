@@ -14,10 +14,11 @@
     position: relative;
     display: flex;
     justify-content: center;
-}
-
-.landing-img {
-    width: 100%;
+    height: 80vh;
+    background-image: url("/src/assets/uka_blindern_isak.jpg");
+    background-size: cover;
+    background-position: center;
+    background-position-y: top;
 }
 
 .landing-image-text {

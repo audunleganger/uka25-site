@@ -1,3 +1,4 @@
+import React from "react";
 import "./ProgramCard.css";
 
 interface ProgramCardProps {
@@ -16,11 +17,17 @@ export default function ProgramCard({
     return (
         <div
             className="program-card"
-            style={{ backgroundImage: `url(${imagePath})` }}
+            style={
+                {
+                    "--background-image": `url(${imagePath})`,
+                } as React.CSSProperties
+            }
         >
             <h1 className="program-card-date">{date}</h1>
             <h1 className="program-card-title">{title}</h1>
-            <p className="program-card-text">{children}</p>
+            <div className="program-card-text-wrapper">
+                <p className="program-card-text">{children}</p>
+            </div>
         </div>
     );
 }

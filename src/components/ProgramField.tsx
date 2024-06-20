@@ -37,6 +37,14 @@ export default function ProgramField() {
                 >
                     Bli med på intern dag med Blinderntalenter.
                 </ProgramCard>
+                <ProgramCard
+                    title="Festivaldag"
+                    imagePath="/src/assets/festivaldag.jpg"
+                    date="Onsdag 21. august"
+                >
+                    Bli med på festivaldag med artister, UKElounge, stand-up og
+                    mye mer.
+                </ProgramCard>
             </div>
         </section>
     );
