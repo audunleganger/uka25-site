@@ -2,3 +2,16 @@
     color: black;
     background-color: #ffce00;
 }
+
+.program-header {
+    display: block;
+    background-color: #eebd00;
+    text-align: center;
+}
+
+.program-card-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
