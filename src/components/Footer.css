@@ -1,0 +1,32 @@
+.footer {
+    display: block;
+    width: 100%;
+}
+
+.footer-content-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    width: inherit;
+}
+
+
+.some-wrapper{
+    flex: 4;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1em;
+    align-items: center;
+}
+
+.info-box {
+    flex: 5;
+    display: block;
+}
+
+.some-icon {
+    background-color: grey;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 0 0.5em;
+    cursor: pointer;
+}
