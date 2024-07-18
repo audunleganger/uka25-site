@@ -75,3 +75,10 @@
     color: white;
     padding: 0.5em;
 }
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .program-card {
+        width: 90vw;
+    }
+}

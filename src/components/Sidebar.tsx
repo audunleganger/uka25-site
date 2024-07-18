@@ -1,4 +1,4 @@
-import "./Sidebar.css"
+import "./Sidebar.css";
 
 type SidebarProps = {
     className?: string;
@@ -7,9 +7,18 @@ type SidebarProps = {
 export default function Sidebar({ className }: SidebarProps) {
     return (
         <div className={`${className}`}>
-            <button className="sidebar-button">Home</button>
-            <button className="sidebar-button">Artist</button>
-            <button className="sidebar-button">Program</button>
+            <button className="sidebar-button">
+                Hjem <br />
+                (uferdig)
+            </button>
+            <button className="sidebar-button">
+                Artister <br />
+                (uferdig)
+            </button>
+            <button className="sidebar-button">
+                Program <br />
+                (uferdig)
+            </button>
         </div>
-    )
+    );
 }

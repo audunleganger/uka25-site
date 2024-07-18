@@ -16,3 +16,10 @@
     flex-direction: row;
     flex-wrap: nowrap;
 }
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .program-card-wrapper {
+        flex-direction: column;
+    }
+}

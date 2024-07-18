@@ -28,14 +28,16 @@ export default function ProgramField() {
                     imagePath="/src/assets/billa_bar.jpg"
                     date="Mandag 19. august"
                 >
-                    Bli med på pub til pub & Battle of the Bands.
+                    Bli med på pub til pub, eller dominer musikalsk på Battle of
+                    the Bands.
                 </ProgramCard>
                 <ProgramCard
                     title="Blinderntalenter"
                     imagePath="/src/assets/blindern_talenter.jpg"
                     date="Tirsdag 20. august"
                 >
-                    Bli med på intern dag med Blinderntalenter.
+                    Bli med på interndag, og vis frem dine evner på Blindern
+                    Talenter.
                 </ProgramCard>
                 <ProgramCard
                     title="Festivaldag"
