@@ -1,6 +1,9 @@
 import "./ProgramCard";
 import ProgramCard from "./ProgramCard";
 import "./ProgramField.css";
+import billaBarImage from "../assets/billa_bar.jpg";
+import blindernTalenterImage from "../assets/blindern_talenter.jpg";
+import festivaldagImage from "../assets/festivaldag.jpg";
 
 export default function ProgramField() {
     return (
@@ -25,7 +28,7 @@ export default function ProgramField() {
             <div className="program-card-wrapper">
                 <ProgramCard
                     title="Pub til pub & Battle of the Bands"
-                    imagePath="/src/assets/billa_bar.jpg"
+                    imagePath={billaBarImage}
                     date="Mandag 19. august"
                 >
                     Bli med på pub til pub, eller dominer musikalsk på Battle of
@@ -33,7 +36,7 @@ export default function ProgramField() {
                 </ProgramCard>
                 <ProgramCard
                     title="Blinderntalenter"
-                    imagePath="/src/assets/blindern_talenter.jpg"
+                    imagePath={blindernTalenterImage}
                     date="Tirsdag 20. august"
                 >
                     Bli med på interndag, og vis frem dine evner på Blindern
@@ -41,7 +44,7 @@ export default function ProgramField() {
                 </ProgramCard>
                 <ProgramCard
                     title="Festivaldag"
-                    imagePath="/src/assets/festivaldag.jpg"
+                    imagePath={festivaldagImage}
                     date="Onsdag 21. august"
                 >
                     Bli med på festivaldag med artister, UKElounge, stand-up og

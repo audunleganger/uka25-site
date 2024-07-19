@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
-import { Link } from "react-router-dom";
 import "./Header.css";
 import Sidebar from "./Sidebar";
 
