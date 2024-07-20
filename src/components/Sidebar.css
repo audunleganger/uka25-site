@@ -1,13 +1,24 @@
 .sidebar {
+    padding: 0 2em;
+    padding-top: 5em;
+    width: 15em;
+    border-left: 2px solid black;
+}
+
+.sidebar-logo {
+    margin-left: -1.8em;
+    padding: 0;
+    width: 14em;
+    display: absolute;
+    top: 50em;
+}
+
+.sidebar-button-wrapper {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: 0 2em;
-    padding-top: 5em;
-    border-left: 2px solid black;
     justify-content: center;
     gap: 2em;
-    width: 15em;
 }
 
 .sidebar-button {

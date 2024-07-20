@@ -34,3 +34,13 @@
 .time-label {
     text-transform: uppercase;
 }
+
+@media (max-width: 768px) {
+    .time-value {
+        font-size: 2em;
+    }
+
+    .countdown-timer-header {
+        font-size: 2em;
+    }
+}

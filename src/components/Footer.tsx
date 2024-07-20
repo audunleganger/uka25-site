@@ -35,7 +35,9 @@ export default function Footer() {
                     <p>
                         Kontakt
                         <br />
-                        kontakt@blindernuka.no
+                        <Link to="mailto:kontakt@blindernuka.no">
+                            kontakt@blindernuka.no
+                        </Link>
                     </p>
                 </div>
             </div>
