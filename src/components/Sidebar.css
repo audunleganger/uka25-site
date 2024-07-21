@@ -1,34 +1,86 @@
-.sidebar {
-    padding: 0 2em;
-    padding-top: 5em;
-    width: 15em;
-    border-left: 2px solid black;
+.burger-menu {
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    position: fixed;
+    top: 2em;
+    right: 3em;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    transition: background-color 0.2s ease, filter 0.2s ease, color 0.2s ease;
 }
 
-.sidebar-logo {
-    margin-left: -1.8em;
-    padding: 0;
-    width: 14em;
-    display: absolute;
-    top: 50em;
+.burger-menu img {
+    width: 50%;
 }
 
-.sidebar-button-wrapper {
-    box-sizing: border-box;
+.burger-menu:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+.burger-menu.open {
+    background-color: black;
+}
+
+.burger-menu.open:hover {
+    background-color: rgba(10, 10, 10, 0.8);
+}
+
+.burger-menu.open img {
+    filter: brightness(0) invert(1);
+}
+
+.sidebar-wrapper {
+    background-color: #ffce00;
+    width: 20em;
+    padding-top: 10vh;
+    padding-bottom: 40vh;
+    height: 100vh;
+    justify-content: space-between;
+    position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 2em;
+    align-items: center;
+    border-left: 2px solid black;
+    transition: right 0.2s ease-in-out;
+    z-index: 1;
 }
 
+.miniuka-logo {
+    width: 80%;
+}
 .sidebar-button {
+    background-color: rgba(206, 155, 59, 0.603);
+    border: 3px solid black;
+    width: 80%;
+    border-radius: 1em;
     font-size: 2em;
-    margin: 10px 0;
-    border-radius: 5px;
-    padding: 0.5em 1em;
-    background-color: transparent;
+    transition: background-color 0.2s ease, color 0.2s ease-in-out;
+    cursor: pointer;
 }
 
-.sidebar-button:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+.sidebar-wrapper button:hover {
+    background-color: black;
+    color: white;
+}
+.sidebar-wrapper.closed {
+    right: -100%;
+}
+
+.sidebar-wrapper.open {
+    right: 0;
+}
+
+.sidebar-button.disabled {
+    color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(240, 240, 240, 0.8);
+    border: 3px solid grey;
+}
+
+.sidebar-button.disabled:hover {
+    color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(240, 240, 240, 0.8);
+    border: 3px solid grey;
+    cursor: default;
 }

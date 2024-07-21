@@ -1,26 +1,57 @@
 import "./Sidebar.css";
-import blindernUkaLogoBlack from "../assets/logo-miniuka-svart.png";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import burgerIcon from "../assets/icons/burger.png";
+import miniUkaLogo from "../assets/logo-miniuka-svart.png";
 
-type SidebarProps = {
-    className?: string;
-};
+interface SidebarProps {
+    activePage: string;
+}
 
-export default function Sidebar({ className }: SidebarProps) {
+export default function Sidebar({ activePage }: SidebarProps) {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate();
+
+    function handleBurgerClick() {
+        setMenuOpen(!menuOpen);
+    }
+
+    function activeClassname(pageName: String) {
+        return activePage !== pageName ? "active" : "disabled";
+    }
+
+    function handleSidebarButtonClick(url: string) {
+        navigate(url);
+        window.scrollTo(0, 0);
+    }
+
     return (
-        <div className={`${className}`}>
-            <img className="sidebar-logo" src={blindernUkaLogoBlack} />
-            <div className="sidebar-button-wrapper">
-                <button className="sidebar-button">
-                    Hjem <br />
-                    (uferdig)
+        <div className="Sidebar">
+            <button
+                className={`burger-menu ${menuOpen ? "open" : "closed"}`}
+                onClick={handleBurgerClick}
+            >
+                <img src={burgerIcon} alt="burger" />
+            </button>
+            <div className={`sidebar-wrapper ${menuOpen ? "open" : "closed"}`}>
+                <img className="miniuka-logo" src={miniUkaLogo} />
+                <button
+                    className={`sidebar-button ${activeClassname("home")}`}
+                    onClick={() => handleSidebarButtonClick("//")}
+                >
+                    Hjem
                 </button>
-                <button className="sidebar-button">
-                    Artister <br />
-                    (uferdig)
+                <button
+                    className={`sidebar-button ${activeClassname("program")}`}
+                    onClick={() => handleSidebarButtonClick("/program/")}
+                >
+                    Program
                 </button>
-                <button className="sidebar-button">
-                    Program <br />
-                    (uferdig)
+                <button
+                    className={`sidebar-button ${activeClassname("contact")}`}
+                    onClick={() => handleSidebarButtonClick("/contact/")}
+                >
+                    Kontakt
                 </button>
             </div>
         </div>
