@@ -35,4 +35,7 @@
     .program-entry-image {
         width: 80vw;
     }
+    .program-entry-title {
+        font-size: 2em;
+    }
 }

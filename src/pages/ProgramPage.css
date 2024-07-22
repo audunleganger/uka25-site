@@ -4,3 +4,10 @@
     font-size: 4em;
     padding-top: 2em;
 }
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .date-header {
+        font-size: 2em;
+    }
+}
