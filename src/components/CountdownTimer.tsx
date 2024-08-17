@@ -1,4 +1,5 @@
 import "./CountdownTimer.css";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 import { useState, useEffect } from "react";
 
@@ -30,6 +31,21 @@ export default function CountdownTimer() {
     const [timeLeftString, setTimeLeftString] = useState(
         createTimeLeftString()
     );
+    const [ref, isIntersecting] = useIntersectionObserver({
+        threshold: 0,
+    });
+
+    useEffect(() => {
+        if (ref.current) {
+            if (isIntersecting) {
+                ref.current.classList.add("visible");
+                ref.current.classList.remove("hidden");
+            } else {
+                ref.current.classList.add("hidden");
+                ref.current.classList.remove("visible");
+            }
+        }
+    });
 
     // Use an effect t oupdate the time left every second
     useEffect(() => {
@@ -44,9 +60,9 @@ export default function CountdownTimer() {
     }, []);
 
     return (
-        <section className="countdown-wrapper">
+        <section className="countdown-wrapper hidden" ref={ref}>
             <h1 className="countdown-timer-header">
-                Tid igjen før MiniUKA 2025
+                Nedtelling til MiniUKA på Blindern 2025
             </h1>
             <div className="timer-field">
                 <div className="time-unit">

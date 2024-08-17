@@ -1,13 +1,39 @@
 .date-header {
-    display: block;
+    margin: 0 auto;
     text-align: center;
     font-size: 4em;
     padding-top: 2em;
+    font-family: "chantal-medium";
 }
 
+.date-header span {
+    padding: 1rem 2rem;
+    background-image: radial-gradient(
+        circle,
+        var(--color-uka-red) 0%,
+        var(--color-uka-red) 60%,
+        rgba(255, 0, 0, 0) 100%
+    );
+
+    color: var(--color-uka-white);
+}
+
+.program-entry-list {
+    list-style: none;
+    text-align: left;
+}
+
+.program-entry-lis li strong {
+    text-transform: uppercase;
+}
 /* Media query for mobile screens */
 @media (max-width: 768px) {
     .date-header {
-        font-size: 2em;
+        font-size: 1.2rem;
     }
+}
+
+@font-face {
+    font-family: "chantal-medium";
+    src: url("/src/assets/fonts/chantal-medium.otf");
 }

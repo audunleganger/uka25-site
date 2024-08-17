@@ -1,20 +1,20 @@
 .program-card {
     position: relative;
+    display: border-box;
     text-align: center;
     padding-bottom: 30em;
     background-size: cover;
     background-position: center;
     background-position-x: 50%;
-    color: white;
+    color: #ffce00;
     text-shadow: 2px 2px 4px #000000;
     width: 28%;
     height: 50em;
-    border-radius: 1em;
+    border-radius: 0.5em;
     padding-top: 2em;
     overflow: hidden;
-    margin: 1em;
-    filter: grayscale(100%);
-    transition: filter 0.5s ease, border 0.5s ease, box-shadow 0.5s ease;
+    margin: 1rem;
+    filter: grayscale(0%);
     box-shadow: -5px 5px 20px 0 rgba(0, 0, 0, 0.6),
         5px 5px 20px 0 rgba(0, 0, 0, 0.6), 5px -5px 20px 0 rgba(0, 0, 0, 0.6),
         -5px -5px 20px 0 rgba(0, 0, 0, 0.6);
@@ -31,28 +31,30 @@
     background-image: var(--background-image);
     background-size: cover;
     background-position: center;
-    transition: transform 0.5s ease;
     z-index: -1;
+    transition: transform 0.5s ease, filter 0.5s ease, border 0.5s ease,
+        box-shadow 0.5s ease;
 }
 
 .program-card:hover {
-    filter: grayscale(0%);
     border: 2px transparent;
-    box-shadow: -5px 5px 20px 0 red, 5px 5px 20px 0 red, 5px -5px 20px 0 red,
-        -5px -5px 20px 0 red;
+    box-shadow: -5px 5px 20px 0 black, 5px 5px 20px 0 black,
+        5px -5px 20px 0 black, -5px -5px 20px 0 black;
 }
 
 .program-card:hover::before {
     transform: scale(1.1);
+    filter: grayscale(100%);
 }
 .program-card-date {
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 2em;
+    font-family: chantal-light, Arial;
+    color: #ef262c;
 }
 
 .program-card-title {
     font-size: 2em;
-    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .program-card-text-wrapper {
@@ -79,6 +81,12 @@
 /* Media query for mobile screens */
 @media (max-width: 768px) {
     .program-card {
-        width: 90vw;
+        width: 80vw;
+        height: 40vh;
     }
+}
+
+@font-face {
+    font-family: "chantal-light";
+    src: url("/src/assets/fonts/chantal-light.otf");
 }

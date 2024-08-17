@@ -6,6 +6,7 @@ interface ProgramCardProps {
     title: string;
     date: string;
     imagePath: string;
+    hashId: string;
     children: React.ReactNode;
 }
 
@@ -14,6 +15,7 @@ export default function ProgramCard({
     date,
     imagePath,
     children,
+    hashId,
 }: ProgramCardProps) {
     const navigate = useNavigate();
     return (
@@ -25,8 +27,7 @@ export default function ProgramCard({
                 } as React.CSSProperties
             }
             onClick={() => {
-                navigate("/program/");
-                window.scrollTo(0, 0);
+                navigate(`/miniuka/program#${hashId}`);
             }}
         >
             <h1 className="program-card-date">{date}</h1>

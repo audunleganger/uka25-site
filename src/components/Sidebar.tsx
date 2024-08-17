@@ -2,7 +2,7 @@ import "./Sidebar.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import burgerIcon from "../assets/icons/burger.png";
-import miniUkaLogo from "../assets/logo-miniuka-svart.png";
+import miniUkaLogo from "../assets/icons/logo-miniuka-svart-roed.png";
 
 interface SidebarProps {
     activePage: string;
@@ -43,9 +43,19 @@ export default function Sidebar({ activePage }: SidebarProps) {
                 </button>
                 <button
                     className={`sidebar-button ${activeClassname("program")}`}
-                    onClick={() => handleSidebarButtonClick("/program/")}
+                    onClick={() =>
+                        handleSidebarButtonClick("/miniuka/program/")
+                    }
                 >
                     Program
+                </button>
+                <button
+                    className={`sidebar-button ${activeClassname("artists")}`}
+                    onClick={() =>
+                        handleSidebarButtonClick("/miniuka/artists/")
+                    }
+                >
+                    Artister
                 </button>
                 <button
                     className={`sidebar-button ${activeClassname("contact")}`}

@@ -1,0 +1,10 @@
+.row {
+    background-color: #ffce00;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.logo {
+    width: 8rem;
+    display: block;
+}

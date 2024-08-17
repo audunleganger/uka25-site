@@ -4,14 +4,16 @@
     align-items: center;
     width: 100%;
     font-family: "Arial";
-    background-color: rgba(0, 0, 0, 0.5);
     font-family: inherit;
-    /* padding: 1em 0 1em 0; */
+    padding: 1em 0 1em 0;
     justify-content: space-between;
+    color: #ffce00;
 }
 
 .countdown-timer-header {
     font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .timer-field {
@@ -29,7 +31,6 @@
 
 .time-value {
     font-size: 5em;
-    color: white;
 }
 
 .time-label {
