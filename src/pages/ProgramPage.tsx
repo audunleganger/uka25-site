@@ -40,7 +40,7 @@ function ProgramPage() {
                 <ul className="program-entry-list">
                     <li>17:00 - Billa og Spektrum bar åpner</li>
                     <li>
-                        <strong>19:00 - Battle of the Bands</strong>
+                        <strong>20:00 - Battle of the Bands</strong>
                     </li>
                     <li>22:00 - Live-musikk / allsang</li>
                     <li>03:00 - Barene stenger</li>
@@ -87,7 +87,7 @@ function ProgramPage() {
                 imagePath={imgFestival}
             >
                 <ul className="program-entry-list">
-                    <li>12:00 - UKElounge med DJ og hagespill</li>
+                    <li>13:00 - UKElounge med DJ og hagespill</li>
                     <li>17:00 - Dørene åpner</li>
                     <li>17:15 - Standup med Grettir!</li>
                     <li>
@@ -96,7 +96,6 @@ function ProgramPage() {
                     <li>23:00 - BIlla og Spektrum bar åpner</li>
                     <li>00:30 - Nach i ULKA</li>
                     <li>03:00 - Barene stenger</li>
-                    <li>03:30 - ULKA-nach?</li>
                 </ul>
             </ProgramEntry>
             <Footer />
