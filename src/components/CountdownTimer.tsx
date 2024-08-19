@@ -11,12 +11,22 @@ export default function CountdownTimer() {
 
     const createTimeLeftString = () => {
         const timeLeft = getTimeLeftFromNow();
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-            (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        // Set the value of days, hours, minutes, and seconds to the correct value, or 0 if in the past
+        const days =
+            timeLeft > 0 ? Math.floor(timeLeft / (1000 * 60 * 60 * 24)) : 0;
+        const hours =
+            timeLeft > 0
+                ? Math.floor(
+                      (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                  )
+                : 0;
+        const minutes =
+            timeLeft > 0
+                ? Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60))
+                : 0;
+        const seconds =
+            timeLeft > 0 ? Math.floor((timeLeft % (1000 * 60)) / 1000) : 0;
 
         const daysString = days < 10 ? `0${days}` : `${days}`;
         const hoursString = hours < 10 ? `0${hours}` : `${hours}`;
@@ -27,10 +37,11 @@ export default function CountdownTimer() {
     };
 
     // Set the final time for the countdown timer to monday 19. august 2024 at 00:00:00
-    const endDateTime = new Date("2024-08-19T12:00:00Z");
+    const endDateTime = new Date("2024-08-19T15:00:00Z");
     const [timeLeftString, setTimeLeftString] = useState(
         createTimeLeftString()
     );
+    const [eventHasStarted, setEventHasStarted] = useState(false);
     const [ref, isIntersecting] = useIntersectionObserver({
         threshold: 0,
     });
@@ -47,10 +58,16 @@ export default function CountdownTimer() {
         }
     });
 
-    // Use an effect t oupdate the time left every second
+    // Use an effect to update the time left every second
     useEffect(() => {
+        if (getTimeLeftFromNow() <= 0) {
+            setEventHasStarted(true);
+        }
         const timer = setInterval(() => {
             setTimeLeftString(createTimeLeftString());
+            if (getTimeLeftFromNow() <= 0) {
+                setEventHasStarted(true);
+            }
         }, 1000);
 
         // Clear the interval when the component is unmounted
@@ -90,6 +107,11 @@ export default function CountdownTimer() {
                     <span className="time-label">Sekunder</span>
                 </div>
             </div>
+            {eventHasStarted && (
+                <h2 className="timer-has-started-field">
+                    MiniUKA på Blindern 2025 har offisielt begynt!
+                </h2>
+            )}
         </section>
     );
 }

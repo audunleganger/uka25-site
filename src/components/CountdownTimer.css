@@ -7,7 +7,7 @@
     font-family: inherit;
     padding: 1em 0 1em 0;
     justify-content: space-between;
-    color: #ffce00;
+    color: var(--color-uka-yellow);
 }
 
 .countdown-timer-header {
@@ -26,15 +26,27 @@
     justify-content: center;
     align-items: center;
     flex-wrap: none;
-    margin: 0 3em;
+    margin: 0 3rem;
 }
 
 .time-value {
     font-size: 5em;
+    text-shadow: 0 0 15px var(--color-uka-yellow);
 }
 
 .time-label {
     text-transform: uppercase;
+}
+
+.timer-has-started-field {
+    border-radius: 25px;
+    background-color: var(--color-uka-red);
+    box-shadow: 0px 0px 15px var(--color-uka-red);
+    font-size: 3rem;
+    margin-top: 3rem;
+    padding: 0.5rem 1rem;
+    color: var(--color-uka-white);
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -48,5 +60,8 @@
 
     .time-unit {
         margin: 0 0.5em;
+    }
+    .timer-has-started-field {
+        font-size: 2rem;
     }
 }
