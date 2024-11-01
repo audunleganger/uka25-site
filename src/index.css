@@ -7,12 +7,13 @@
 
 :root {
     font-family: chantal-medium, Roboto, sans-serif;
-    background-color: #0c0c0c;
     --color-uka-yellow: #ffce00;
+    --color-uka-light-yellow: #fff3c1;
     --color-uka-red: #ef262c;
     --color-uka-black: #0c0c0c;
     --color-uka-white: #f7f7f7;
-    color: var(--color-uka-white);
+    color: var(--color-uka-black);
+    background-color: var(--color-uka-light-yellow);
 }
 
 .hidden {
@@ -37,4 +38,8 @@
 @font-face {
     font-family: "chantal-light";
     src: url("/src/assets/fonts/chantal-light.otf");
+}
+@font-face {
+    font-family: "degular-light";
+    src: url("/src/assets/fonts/degular-light.otf");
 }

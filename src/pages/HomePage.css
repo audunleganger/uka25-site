@@ -1,10 +1,9 @@
-.row {
-    background-color: #ffce00;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-}
-.logo {
-    width: 8rem;
+.mainLogo {
+    position: relative;
+    margin: 0 auto;
+    width: 20vw;
     display: block;
+    margin-top: 1rem;
+    /* -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3))
+        drop-shadow(-1px -1px 1px rgba(0, 0, 0, 0.3)); */
 }
