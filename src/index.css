@@ -6,7 +6,7 @@
 }
 
 :root {
-    font-family: chantal-medium, Roboto, sans-serif;
+    font-family: degular-light, chantal-medium, Roboto, sans-serif;
     --color-uka-yellow: #ffce00;
     --color-uka-light-yellow: #fff3c1;
     --color-uka-red: #ef262c;
@@ -42,4 +42,12 @@
 @font-face {
     font-family: "degular-light";
     src: url("/src/assets/fonts/degular-light.otf");
+}
+@font-face {
+    font-family: "degular-regular";
+    src: url("/src/assets/fonts/degular-regular.otf");
+}
+@font-face {
+    font-family: "degular-bold";
+    src: url("/src/assets/fonts/degular-bold.otf");
 }

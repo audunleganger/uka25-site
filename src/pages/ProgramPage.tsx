@@ -1,4 +1,4 @@
-import ProgramEntry from "../components/ProgramEntry";
+import ProgramEntry from "../components/legacy/ProgramEntry";
 import Footer from "../components/Footer";
 import Sidebar from "../components/Sidebar";
 import imgBarTilBar from "../assets/program-images/utebar.jpg";

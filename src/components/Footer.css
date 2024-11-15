@@ -27,7 +27,7 @@
 }
 
 a {
-    color: white;
+    color: black;
 }
 
 .some-icon {
@@ -39,6 +39,12 @@ a {
     transition: background-color 0.25s ease;
 }
 
+.some-icon img {
+    transition: filter 0.25s ease;
+}
+.some-icon:hover img {
+    filter: invert(0.95);
+}
 .fb-icon {
     background-color: rgb(84, 115, 145);
 }

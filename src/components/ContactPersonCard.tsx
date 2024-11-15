@@ -1,17 +1,26 @@
-import contactPersonAvatar from "../assets/board-images/haavard.jpg";
 import "./ContactPersonCard.css";
 
-const ContactPersonCard = () => {
+interface ContactPersonCardProps {
+    name: string;
+    role: string;
+    email: string;
+    phone: string;
+    avatarImagePath: string;
+}
+const ContactPersonCard: React.FC<ContactPersonCardProps> = ({
+    name,
+    role,
+    email,
+    phone,
+    avatarImagePath,
+}) => {
     return (
         <div className="contact-person-card">
-            <img
-                className="contact-person-card-avatar"
-                src={contactPersonAvatar}
-            />
-            <h1 className="contact-person-card-name">Håvard Rødsand</h1>
-            <h2 className="contact-person-card-role">Pressesjef</h2>
-            <p className="contact-person-card-email">håvard@epost.cum</p>
-            <p className="contact-person-card-phone">123 45 678</p>
+            <img className="contact-person-card-avatar" src={avatarImagePath} />
+            <h1 className="contact-person-card-name">{name}</h1>
+            <h2 className="contact-person-card-role">{role}</h2>
+            <p className="contact-person-card-email">{email}</p>
+            <p className="contact-person-card-phone">{phone}</p>
         </div>
     );
 };

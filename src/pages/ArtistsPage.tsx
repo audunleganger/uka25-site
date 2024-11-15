@@ -1,7 +1,7 @@
 import "./ArtistPage.css";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
-import ArtistsGrid from "../components/ArtitsGrid";
+import ArtistsGrid from "../components/legacy/ArtitsGrid";
 // import { useMultipleIntersectionObservers } from "../hooks/useMultipleIntersectionObservers";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 

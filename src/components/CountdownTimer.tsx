@@ -1,6 +1,5 @@
 import "./CountdownTimer.css";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-
 import { useState, useEffect } from "react";
 
 export default function CountdownTimer() {
@@ -37,7 +36,7 @@ export default function CountdownTimer() {
     };
 
     // Set the final time for the countdown timer to monday 19. august 2024 at 00:00:00
-    const endDateTime = new Date("2024-08-19T15:00:00Z");
+    const endDateTime = new Date("2025-01-27T15:00:00Z");
     const [timeLeftString, setTimeLeftString] = useState(
         createTimeLeftString()
     );
