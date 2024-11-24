@@ -1,48 +1,27 @@
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import DesktopHeader from "./DesktopHeader";
+import MobileHeader from "./MobileHeader";
+import { getCssVariable } from "../utils/getCssVariable";
 import "./Header.css";
-import logoBlackYellow from "../assets/icons/logo-sort-roed.png";
+
 const Header: React.FC = () => {
-    const navigate = useNavigate();
-    return (
-        <>
-            <header>
-                <img
-                    className="headerLogo"
-                    src={logoBlackYellow}
-                    alt="UKA-logo"
-                    onClick={() => navigate("//")}
-                />
-                <button
-                    className="headerButton"
-                    onClick={() => navigate("/program")}
-                >
-                    Program
-                </button>
-                <button
-                    className="headerButton"
-                    onClick={() =>
-                        (window.location.href =
-                            "https://billett.blindernuka.no/")
-                    }
-                >
-                    Billetter
-                </button>
-                <button className="headerButton" onClick={() => navigate("")}>
-                    Frivillig
-                </button>
-                <button className="headerButton" onClick={() => navigate("")}>
-                    Om UKA
-                </button>
-                <button
-                    className="headerButton"
-                    onClick={() => navigate("/contact")}
-                >
-                    Kontakt
-                </button>
-            </header>
-            <div className="header-placeholder"></div>
-        </>
+    const mobileScreenWidth = parseInt(
+        getCssVariable("--header-width-threshold"),
+        10
     );
+    const [isMobile, setIsMobile] = useState<boolean>(
+        window.innerWidth < mobileScreenWidth
+    );
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < mobileScreenWidth);
+        };
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [mobileScreenWidth]);
+
+    return isMobile ? <MobileHeader /> : <DesktopHeader />;
 };
 
 export default Header;

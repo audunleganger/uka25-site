@@ -78,7 +78,7 @@ export default function CountdownTimer() {
     return (
         <section className="countdown-wrapper hidden" ref={ref}>
             <h1 className="countdown-timer-header">
-                Nedtelling til MiniUKA på Blindern 2025
+                Nedtelling til UKA på Blindern 2025
             </h1>
             <div className="timer-field">
                 <div className="time-unit">

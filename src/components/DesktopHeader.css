@@ -1,0 +1,63 @@
+.desktop-header {
+    height: 5rem;
+}
+
+.desktop-header + .header-placeholder {
+    height: 5rem;
+}
+
+.desktop-header {
+    width: 100%;
+    background-color: var(--color-uka-yellow);
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding-right: 10%;
+    z-index: 1;
+}
+
+.headerLogo {
+    width: 7rem;
+}
+
+.headerButton {
+    background: none;
+    height: 3rem;
+    /* background-color: var(--color-uka-red); */
+    font-family: "chantal-medium";
+    font-size: 1.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.headerButton.disabled {
+    background-color: grey;
+    color: black;
+    position: relative;
+}
+.headerButton.disabled::after {
+    position: absolute;
+    font-size: 0.8rem;
+    font-family: degular-light;
+    content: "(kommer snart!)";
+    top: 2rem;
+    left: 25%;
+}
+
+.headerButton.disabled:hover {
+    cursor: not-allowed;
+    background-color: grey;
+}
+
+.headerButton:hover {
+    background-color: var(--color-uka-light-yellow);
+    cursor: pointer;
+}
+
+header > :last-child {
+    margin-right: 10rem;
+}

@@ -1,0 +1,54 @@
+.event-timeline {
+    margin-top: 3rem;
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.event-group {
+    display: flex;
+    flex-flow: column;
+    background-color: rgba(238, 187, 49, 0.801);
+    margin: 1rem;
+    width: 30rem;
+    flex-shrink: 0;
+}
+
+.event {
+    flex: 1;
+    display: flex;
+    flex-flow: row;
+}
+
+.event-group-header-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(43, 43, 43);
+    color: var(--color-uka-yellow);
+    padding: 0.5rem;
+}
+
+.event-group-header-info > * {
+    font-size: 1.5rem;
+}
+
+.event > * {
+    flex: 1;
+    justify-content: center;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.event-name {
+    flex: 2;
+}
+
+.event-time {
+    flex: 1;
+}
+
+.event-location {
+    flex: 1;
+}

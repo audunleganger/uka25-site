@@ -5,6 +5,7 @@ import "./HomePage.css";
 import mainLogo from "../assets/icons/logo-uka-gul.png";
 import concertImage from "../assets/misc/konsert-spektrum.jpg";
 import ImageInfoBox from "../components/ImageInfoBox";
+// import EventTimeline from "../components/EventTimeline";
 
 function HomePage() {
     return (
@@ -16,6 +17,7 @@ function HomePage() {
                 <h1>Uka på Blindern</h1>
                 <p>Kom innom under uka på Blindern!</p>
             </ImageInfoBox>
+            {/* <EventTimeline /> */}
             <Footer />
         </div>
     );

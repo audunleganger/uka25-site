@@ -1,0 +1,9 @@
+.mobile-header .headerButton {
+    font-family: "Arial";
+}
+
+@media (max-width: var(--header-width-threshold)) {
+    .header-placeholder {
+        background-color: red;
+    }
+}
