@@ -1,13 +1,29 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import HeaderContent from "./HeaderContent";
 import "./MobileHeader.css";
 const DesktopHeader: React.FC = () => {
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     useEffect(() => {
         console.log("Rendering mobile header");
     });
+
+    const handleBurgerMenuClick = (): void => {
+        setMobileMenuOpen(!mobileMenuOpen);
+    };
+
     return (
         <>
-            <div className="header mobile-header">
+            <button
+                className={`burger-menu ${mobileMenuOpen ? "open" : "closed"}`}
+                onClick={handleBurgerMenuClick}
+            >
+                Burger
+            </button>
+            <div
+                className={`header mobile-header ${
+                    mobileMenuOpen ? "open" : "closed"
+                }`}
+            >
                 <HeaderContent />
             </div>
         </>

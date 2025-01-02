@@ -1,4 +1,29 @@
+.mobile-header {
+    --mobile-header-width: 35vw;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    width: var(--mobile-header-width);
+    transition: right 0.3s ease;
+    background-color: var(--color-uka-light-yellow);
+    border-left: 3px solid black;
+    z-index: 3;
+    padding-top: 4rem;
+    padding-bottom: 15rem;
+}
+
+.mobile-header.closed {
+    right: calc(var(--mobile-header-width) * -1);
+}
+.mobile-header.open {
+    right: 0;
+}
+
 .mobile-header .headerButton {
+    width: 12rem;
     font-family: "Arial";
 }
 
