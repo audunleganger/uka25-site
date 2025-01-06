@@ -15,6 +15,7 @@
     --color-uka-white: #f7f7f7;
     font-family: degular-light, chantal-medium, Roboto, sans-serif;
     color: var(--color-uka-black);
+    /* background-color: var(--color-uka-light-yellow); */
     background-color: var(--color-uka-light-yellow);
 }
 

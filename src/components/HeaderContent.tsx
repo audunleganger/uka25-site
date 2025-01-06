@@ -18,11 +18,9 @@ const HeaderContent = () => {
                 Program
             </button>
             <button
-                className="headerButton disabled"
-                disabled={true}
-                onClick={() =>
-                    (window.location.href = "https://billett.blindernuka.no/")
-                }
+                className="headerButton"
+                disabled={false}
+                onClick={() => navigate("/tickets")}
             >
                 Billetter
             </button>
