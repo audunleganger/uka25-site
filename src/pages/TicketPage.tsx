@@ -43,7 +43,7 @@ interface TicketItemProps {
 
 const TicketItem = ({
     title,
-    category,
+    // category,
     time,
     location,
     ticketUrl,
