@@ -5,7 +5,6 @@ import "./HomePage.css";
 import mainLogo from "../assets/icons/logo-uka-gul.png";
 import concertImage from "../assets/misc/konsert-spektrum.jpg";
 import ImageInfoBox from "../components/ImageInfoBox";
-import EventTimeline from "../components/EventTimeline";
 // import EventTimeline from "../components/EventTimeline";
 
 function HomePage() {
