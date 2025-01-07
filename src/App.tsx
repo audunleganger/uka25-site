@@ -9,6 +9,7 @@ function App() {
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/miniuka/program/" element={<ProgramPage />} />
+            <Route path="/program/" element={<ProgramPage />} />
             <Route path="/contact/" element={<ContactPage />} />
             <Route path="miniuka/artists/" element={<ArtistsPage />} />
             <Route path="/tickets/" element={<TicketPage />} />

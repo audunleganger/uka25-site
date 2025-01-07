@@ -11,8 +11,8 @@ const HeaderContent = () => {
                 onClick={() => navigate("/")}
             />
             <button
-                className="headerButton disabled"
-                disabled={true}
+                className="headerButton"
+                disabled={false}
                 onClick={() => navigate("/program")}
             >
                 Program
@@ -20,7 +20,9 @@ const HeaderContent = () => {
             <button
                 className="headerButton"
                 disabled={false}
-                onClick={() => navigate("/tickets")}
+                onClick={() =>
+                    window.open("https://billett.blindernuka.no/eventgroup/10")
+                }
             >
                 Billetter
             </button>
@@ -29,7 +31,7 @@ const HeaderContent = () => {
                 disabled={true}
                 onClick={() => navigate("")}
             >
-                Frivillig
+                Hilsen fra UKEsjefen
             </button>
             <button
                 className="headerButton disabled"

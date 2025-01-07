@@ -16,9 +16,7 @@ const DesktopHeader: React.FC = () => {
             <button
                 className={`burger-menu ${mobileMenuOpen ? "open" : "closed"}`}
                 onClick={handleBurgerMenuClick}
-            >
-                Burger
-            </button>
+            ></button>
             <div
                 className={`header mobile-header ${
                     mobileMenuOpen ? "open" : "closed"

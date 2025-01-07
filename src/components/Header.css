@@ -1,3 +1,36 @@
 .header {
     display: flex;
 }
+
+.headerButton {
+    background: none;
+    height: 3rem;
+    /* background-color: var(--color-uka-red); */
+    font-family: "chantal-medium";
+    font-size: 1.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.headerButton.disabled {
+    background-color: grey;
+    color: black;
+    position: relative;
+}
+
+.headerButton.disabled:hover {
+    cursor: not-allowed;
+    background-color: grey;
+}
+
+.headerButton:hover {
+    background-color: var(--color-uka-light-yellow);
+    cursor: pointer;
+}
+
+header > :last-child {
+    margin-right: 10rem;
+}

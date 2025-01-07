@@ -34,6 +34,7 @@ import "./TicketPage.css";
 
 interface TicketItemProps {
     title: string;
+    category: string;
     time: string;
     location: string;
     ticketUrl: string;
@@ -42,6 +43,7 @@ interface TicketItemProps {
 
 const TicketItem = ({
     title,
+    category,
     time,
     location,
     ticketUrl,
@@ -72,7 +74,8 @@ const TicketPage = () => {
 
             <div className="event-date-group">
                 <TicketItem
-                    title="Revy: Når er grensa nådd?"
+                    title="Når er grensa nådd?"
+                    category="Revy"
                     time="19:00"
                     location="Revyscenen"
                     ticketUrl="https://billett.blindernuka.no/event/309"
@@ -83,6 +86,7 @@ const TicketPage = () => {
             <div className="event-date-group">
                 <TicketItem
                     title="Revy: Når er grensa nådd?"
+                    category="Revy"
                     time="19:00"
                     location="Revyscenen"
                     ticketUrl="https://billett.blindernuka.no/event/311"

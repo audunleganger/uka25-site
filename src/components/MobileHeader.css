@@ -1,3 +1,11 @@
+.burger-menu {
+    border: 1px solid black;
+    background-image: url("../assets/icons/burger.png");
+    background-size: contain;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .mobile-header {
     --mobile-header-width: 35vw;
     display: flex;
@@ -24,7 +32,7 @@
 
 .mobile-header .headerButton {
     width: 12rem;
-    font-family: "Arial";
+    font-size: 1rem;
 }
 
 @media (max-width: var(--header-width-threshold)) {
