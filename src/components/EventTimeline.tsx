@@ -1,5 +1,6 @@
 import "./EventTimeline.css";
 import React from "react";
+import ticketIcon from "../assets/icons/ticket-icon.svg";
 
 interface EventProps {
     title: string;
@@ -26,6 +27,18 @@ const Event: React.FC<EventProps> = ({
             <span className="event-name">
                 {title}
                 {ticketRequired && ticketLink && (
+                    <div className="ticket-icon-wrapper">
+                        <img
+                            className="ticket-icon"
+                            src={ticketIcon}
+                            alt="Ticket Icon"
+                            onClick={() => {
+                                window.open(ticketLink);
+                            }}
+                        />
+                    </div>
+                )}
+                {/* {ticketRequired && ticketLink && (
                     <span
                         className={
                             ticketRequired
@@ -36,7 +49,7 @@ const Event: React.FC<EventProps> = ({
                             window.open(ticketLink);
                         }}
                     />
-                )}
+                )} */}
             </span>
             <span className="event-time">{time}</span>
             <span className="event-location">{location}</span>
@@ -56,10 +69,13 @@ const EventGroup: React.FC<EventGroupProps> = ({ title, date, children }) => {
     );
 };
 
-const EventTimeline: React.FC = () => {
+interface EventTimelineProps {
+    className?: string;
+}
+const EventTimeline: React.FC<EventTimelineProps> = ({ className }) => {
     return (
-        <div className="event-timeline">
-            <EventGroup title="UKEtog & Oktoberfest" date="27.01.2025">
+        <div className={`event-timeline ${className}`}>
+            {/* <EventGroup title="UKEtog & Oktoberfest" date="27.01.2025">
                 <Event
                     title="UKEtog"
                     time="14:00"
@@ -121,33 +137,43 @@ const EventTimeline: React.FC = () => {
                     location="Matsalen"
                     ticketRequired={false}
                 />
-            </EventGroup>
+            </EventGroup> */}
             <EventGroup title="Premiere & Pub til Pub" date="31.01.2025">
                 <Event
-                    title="Revy"
+                    title="Revy: Når er grensa nådd?"
                     time="18:00"
                     location="Revyscenen"
                     ticketRequired={true}
+                    ticketLink="https://billett.blindernuka.no/event/316"
                 />
                 <Event
                     title="Amish Plow"
-                    time="20:00"
+                    time="20:30"
                     location="Spektrum"
+                    ticketRequired={true}
+                    ticketLink="https://billett.blindernuka.no/event/317"
+                />
+                <Event
+                    title="Allsang med Diabetes Type Beat"
+                    time="22:30"
+                    location="ULKA"
                     ticketRequired={false}
                 />
             </EventGroup>
             <EventGroup title="GB-aften" date="01.02.2025">
                 <Event
-                    title="Revy 1"
+                    title="Revy: Når er grensa nådd? 1"
                     time="18:30"
                     location="Revyscenen"
                     ticketRequired={true}
+                    ticketLink={"https://billett.blindernuka.no/event/319"}
                 />
                 <Event
-                    title="Revy 2"
+                    title="Revy: Når er grensa nådd? 2"
                     time="21:30"
                     location="Revyscenen"
                     ticketRequired={true}
+                    ticketLink={"https://billett.blindernuka.no/event/320"}
                 />
                 <Event
                     title="Cinnamon Girls"
@@ -156,7 +182,7 @@ const EventTimeline: React.FC = () => {
                     ticketRequired={false}
                 />
             </EventGroup>
-            <EventGroup title="Koraften" date="05.02.2025">
+            {/* <EventGroup title="Koraften" date="05.02.2025">
                 <Event
                     title="Revy"
                     time="18:00"
@@ -181,51 +207,49 @@ const EventTimeline: React.FC = () => {
                     location="Fasaden"
                     ticketRequired={false}
                 />
-            </EventGroup>
+            </EventGroup> */}
             <EventGroup title="Mytisk aften/temakveld" date="06.02.2025">
                 <Event
-                    title="Revy"
+                    title="Revy: Når er grensa nådd?"
                     time="18:00"
                     location="Revyscenen"
                     ticketRequired={true}
-                />
-                <Event
-                    title="Gin-kurs"
-                    time="20:15"
-                    location="Matsalen"
-                    ticketRequired={false}
+                    ticketLink={"https://billett.blindernuka.no/event/326"}
                 />
                 <Event
                     title="Podcast"
-                    time="20:15"
+                    time="21:00"
                     location="Revyscenen"
                     ticketRequired={false}
                 />
-                <Event
+                {/* <Event
                     title="Lupina"
                     time="22:15"
                     location="Spektrum"
                     ticketRequired={false}
-                />
+                /> */}
             </EventGroup>
             <EventGroup title="Festivaldag 1" date="07.02.2025">
                 <Event
-                    title="Revy"
+                    title="Revy: Når er grensa nådd?"
                     time="18:00"
                     location="Revyscenen"
                     ticketRequired={true}
+                    ticketLink={"https://billett.blindernuka.no/event/301"}
                 />
                 <Event
                     title="Swada"
                     time="20:30"
                     location="Spektrum"
                     ticketRequired={true}
+                    ticketLink={"https://billett.blindernuka.no/event/298"}
                 />
                 <Event
                     title="Jesper Jenset"
                     time="22:00"
                     location="Spektrum"
                     ticketRequired={true}
+                    ticketLink={"https://billett.blindernuka.no/event/299"}
                 />
             </EventGroup>
             <EventGroup title="Festivaldag 2" date="08.02.2025">
@@ -234,15 +258,24 @@ const EventTimeline: React.FC = () => {
                     time="17:00"
                     location="Revyscenen"
                     ticketRequired={true}
+                    ticketLink={"https://billett.blindernuka.no/event/304"}
                 />
                 <Event
                     title="Simen Steinklev"
                     time="20:30"
                     location="Spektrum"
                     ticketRequired={true}
+                    ticketLink={"https://billett.blindernuka.no/event/305"}
+                />
+                <Event
+                    title="Gjenfødt Kultur"
+                    time="22:00"
+                    location="Spektrum"
+                    ticketRequired={true}
+                    ticketLink={"https://billett.blindernuka.no/event/306"}
                 />
             </EventGroup>
-            <EventGroup title="Teppefall" date="09.02.2025">
+            {/* <EventGroup title="Teppefall" date="09.02.2025">
                 <Event
                     title="Revy"
                     time="18:00"
@@ -261,7 +294,7 @@ const EventTimeline: React.FC = () => {
                     location="Revyscenen"
                     ticketRequired={false}
                 />
-            </EventGroup>
+            </EventGroup> */}
         </div>
     );
 };

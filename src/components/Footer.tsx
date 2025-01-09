@@ -27,16 +27,13 @@ export default function Footer() {
                     </Link>
                 </div>
                 <div className="info-box">
+                    <p>Blindern Studenterhjem, Problemveien 10, 0371 Oslo</p>
+                    <p>Utarbeidet av Audun Leganger, 2024-2025</p>
                     <p>
-                        Adresse
+                        For nettsiderelaterte henvendelser:
                         <br />
-                        Blindern Studenterhjem, Problemveien 10, 0371 Oslo
-                    </p>
-                    <p>
-                        Kontakt
-                        <br />
-                        <Link to="mailto:kontakt@blindernuka.no">
-                            kontakt@blindernuka.no
+                        <Link to="mailto:auleg@blindernuka.no">
+                            auleg@blindernuka.no
                         </Link>
                     </p>
                 </div>

@@ -1,22 +1,124 @@
 .event-timeline {
     margin-top: 3rem;
-    margin-left: 0.5rem;
     display: flex;
     flex-direction: row;
     overflow-x: auto;
     white-space: nowrap;
+    margin-bottom: 2rem;
 }
 
+.vertical {
+    flex-direction: column;
+    align-items: center;
+}
+
+.vertical .event-group {
+    width: 50%;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.event::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+.event:hover::before {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.ticket-icon {
+    cursor: pointer;
+    position: relative;
+    opacity: 1;
+    height: 0.8em;
+}
+
+.ticket-icon-wrapper {
+    display: inline-flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-left: 0.8rem;
+}
+
+.ticket-icon-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: url(/src/assets/icons/ticket-icon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(27%) sepia(92%) saturate(7495%) hue-rotate(357deg)
+        brightness(97%) contrast(114%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.ticket-icon-wrapper:hover::before {
+    opacity: 1;
+}
+
+.ticket-icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-color: red;
+}
+.event:hover .ticket-icon::before {
+    opacity: 1;
+}
+
+.event-timeline::-webkit-scrollbar {
+    height: 14px;
+}
+
+.event-timeline::-webkit-scrollbar-track {
+    background: rgba(238, 187, 49, 0.801);
+}
+
+.event-timeline::-webkit-scrollbar-thumb {
+    background: black;
+}
 .event-group {
     margin: 1rem;
+    margin-bottom: 0;
     width: 30rem;
     flex-shrink: 0;
-    background-color: rgba(238, 187, 49, 0.801);
+    background: linear-gradient(
+        to bottom,
+        rgba(238, 187, 49, 0.801),
+        transparent
+    );
 }
 
 .event {
+    position: relative;
     display: flex;
     flex-flow: row;
+}
+
+.event:nth-child(2n) {
+    background-color: rgba(238, 187, 49, 0.801);
+}
+.event:nth-child(2n-1) {
+    background-color: rgba(146, 115, 30, 0.5);
 }
 
 .event-group-header-info {
@@ -32,25 +134,28 @@
 }
 
 .event > * {
-    flex: 1;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0.5rem;
     font-size: 1.2rem;
 }
 
 .event-name {
-    flex: 3;
+    width: 60%;
 }
 
 .event-time {
-    flex: 3;
+    width: 15%;
 }
 
 .event-location {
-    flex: 3;
+    width: 25%;
 }
 
-.ticket-icon {
-    margin-left: 0.8rem;
-    cursor: pointer;
+@-moz-document url-prefix() {
+    .event-timeline {
+        scrollbar-color: black rgba(238, 187, 49, 0.801);
+    }
+    .event-group {
+        margin-bottom: 0.75rem;
+    }
 }

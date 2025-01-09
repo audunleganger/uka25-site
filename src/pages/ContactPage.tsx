@@ -17,7 +17,7 @@ function ContactPage() {
             <div className="contact-card-wrapper">
                 <ContactPersonCard
                     name="Janne Dahl Sørensen Dimitrova"
-                    role="UKE-sjef"
+                    role="UKEsjef"
                     email="ukesjef@blindernuka.no"
                     phone="+47 938 55 746"
                     avatarImagePath={janneImagePath}
@@ -25,7 +25,7 @@ function ContactPage() {
                 <ContactPersonCard
                     name="Jenny Bjerkås Tangberg"
                     role="Kjellermester"
-                    email="kjeller@blindernuka.no"
+                    email="kjellermester@blindernuka.no"
                     phone="+47 477 52 700"
                     avatarImagePath={jennyImagePath}
                 />

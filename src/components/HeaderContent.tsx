@@ -33,13 +33,13 @@ const HeaderContent = () => {
             >
                 Hilsen fra UKEsjefen
             </button>
-            <button
+            {/* <button
                 className="headerButton disabled"
                 disabled={true}
                 onClick={() => navigate("")}
             >
                 Om UKA
-            </button>
+            </button> */}
             <button
                 className="headerButton"
                 disabled={false}

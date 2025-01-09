@@ -5,7 +5,7 @@ import "./HomePage.css";
 import mainLogo from "../assets/icons/logo-uka-gul.png";
 import concertImage from "../assets/misc/konsert-spektrum.jpg";
 import ImageInfoBox from "../components/ImageInfoBox";
-// import EventTimeline from "../components/EventTimeline";
+import EventTimeline from "../components/EventTimeline";
 
 function HomePage() {
     return (
@@ -13,7 +13,7 @@ function HomePage() {
             <Header />
             <CountdownTimer />
             <img src={mainLogo} alt="logo" className="mainLogo" />
-            {/* <EventTimeline /> */}
+            <EventTimeline />
             <ImageInfoBox imagePath={concertImage}>
                 <h1>UKA på Blindern</h1>
                 <p>Kom innom under uka på Blindern!</p>

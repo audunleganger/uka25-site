@@ -4,34 +4,6 @@ import placeholderImgPath from "../assets/program-images/placeholder.jpg";
 import revyImgPath from "../assets/program-images/revy.jpg";
 import "./TicketPage.css";
 
-// interface EventInfo {
-//     title: string;
-//     time_start: number;
-// }
-// const TicketItem = ({ id }: { id: string }) => {
-// const [eventInfo, setEventInfo] = useState<EventInfo | null>(null);
-// const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-// const targetUrl = `https://billett.blindernuka.no/api/event/${id}`;
-// const fetchEventInfo = async () => {
-//     try {
-//         const response = await fetch(`${proxyUrl}${targetUrl}`);
-//         const data = await response.json();
-//         setEventInfo(data);
-//     } catch (error) {
-//         console.log(`Noe gikk galt: ${error}`);
-//     }
-// };
-
-// useEffect(() => {
-//     fetchEventInfo();
-// });
-
-// if (!eventInfo) {
-//     return <h1>Loading...</h1>;
-// }
-//     return <></>;
-// };
-
 interface TicketItemProps {
     title: string;
     category: string;
@@ -43,7 +15,6 @@ interface TicketItemProps {
 
 const TicketItem = ({
     title,
-    // category,
     time,
     location,
     ticketUrl,
