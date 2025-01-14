@@ -22,14 +22,16 @@
     list-style: none;
     text-align: left;
 }
-
 .program-entry-lis li strong {
     text-transform: uppercase;
 }
 /* Media query for mobile screens */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
     .date-header {
         font-size: 1.2rem;
+    }
+    .vertical .event-group {
+        width: 90vw;
     }
 }
 

@@ -35,9 +35,14 @@
 
 .ticket-icon {
     cursor: pointer;
-    position: relative;
     opacity: 1;
     height: 0.8em;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.ticket-icon:hover {
+    opacity: 0;
+    transform: rotate(45deg);
 }
 
 .ticket-icon-wrapper {
@@ -64,25 +69,12 @@
         brightness(97%) contrast(114%);
     z-index: 1;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .ticket-icon-wrapper:hover::before {
     opacity: 1;
-}
-
-.ticket-icon::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    background-color: red;
-}
-.event:hover .ticket-icon::before {
-    opacity: 1;
+    transform: scale(2) rotate(45deg);
 }
 
 .event-timeline::-webkit-scrollbar {

@@ -38,18 +38,6 @@ const Event: React.FC<EventProps> = ({
                         />
                     </div>
                 )}
-                {/* {ticketRequired && ticketLink && (
-                    <span
-                        className={
-                            ticketRequired
-                                ? "ticket-icon fas fa-money-bill-alt"
-                                : "ticket-icon"
-                        }
-                        onClick={() => {
-                            window.open(ticketLink);
-                        }}
-                    />
-                )} */}
             </span>
             <span className="event-time">{time}</span>
             <span className="event-location">{location}</span>
