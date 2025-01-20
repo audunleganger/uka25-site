@@ -22,8 +22,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-right: 12vw;
     background-color: rgb(255, 195, 117);
+    padding-right: 12vw;
 }
 
 .sign-tree-wrapper {
@@ -40,5 +40,9 @@ iframe {
 @media (max-width: 768px) {
     .tree-spotify-wrapper {
         flex-direction: column;
+        padding-right: 0;
+    }
+    iframe {
+        width: 90vw;
     }
 }

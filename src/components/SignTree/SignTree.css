@@ -106,9 +106,12 @@
     text-shadow: 0 0 10px yellow;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .sign-tree-item {
         color: black;
         text-shadow: 0 0 10px yellow;
+    }
+    .sign-tree-wrapper {
+        transform: scale(0.8);
     }
 }
