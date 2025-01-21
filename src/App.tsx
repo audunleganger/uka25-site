@@ -4,6 +4,7 @@ import ContactPage from "./pages/ContactPage";
 import ArtistsPage from "./pages/ArtistsPage";
 import { Route, Routes } from "react-router-dom";
 import TicketPage from "./pages/TicketPage";
+import JanneStatementPage from "./pages/JanneStatementPage";
 function App() {
     return (
         <Routes>
@@ -13,6 +14,7 @@ function App() {
             <Route path="/contact/" element={<ContactPage />} />
             <Route path="miniuka/artists/" element={<ArtistsPage />} />
             <Route path="/tickets/" element={<TicketPage />} />
+            <Route path="/janne-statement/" element={<JanneStatementPage />} />
         </Routes>
     );
 }

@@ -1,0 +1,35 @@
+.janne-statement-page {
+    background-color: var(--color-uka-lightlight-yellow);
+}
+.janne-statement-content {
+    text-align: center;
+    margin: 0 auto;
+    width: 700px;
+}
+.janne-statement-content h1 {
+    margin: 1rem 0 1rem 0;
+    font-size: 4rem;
+    font-family: chantal-medium;
+    padding-top: 5rem;
+}
+.janne-statement-content h2 {
+    margin: 1rem 0 1rem 0;
+    font-size: 2rem;
+}
+.janne-statement-content p {
+    margin: 2rem 0 2rem 0;
+    font-size: 1.5rem;
+}
+.janne-photo {
+    width: 100%;
+}
+.janne-statement-content .signature {
+    /*bold font*/
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .janne-statement-content {
+        width: 90%;
+    }
+}

@@ -2,7 +2,7 @@ import CountdownTimer from "../components/CountdownTimer";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./HomePage.css";
-import mainLogo from "../assets/icons/logo-uka-gul.png";
+// import mainLogo from "../assets/icons/logo-uka-gul.png";
 import concertImage from "../assets/misc/konsert-spektrum.jpg";
 import ImageInfoBox from "../components/ImageInfoBox";
 import EventTimeline from "../components/EventTimeline";
@@ -13,7 +13,7 @@ function HomePage() {
         <div className="homePage">
             <Header />
             <CountdownTimer />
-            <img src={mainLogo} alt="logo" className="mainLogo" />
+            {/* <img src={mainLogo} alt="logo" className="mainLogo" /> */}
             <EventTimeline />
             <div className="tree-spotify-wrapper">
                 <SignTree />

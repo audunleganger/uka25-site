@@ -1,0 +1,2 @@
+rm -rf ../uka-web/public/2025/*
+cp -r ./dist/* ../uka-web/public/2025/

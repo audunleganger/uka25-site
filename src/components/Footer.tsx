@@ -17,7 +17,10 @@ export default function Footer() {
                             />
                         </button>
                     </Link>
-                    <Link to="https://www.instagram.com/ukapablindern/">
+                    <Link
+                        to="https://www.instagram.com/blindernuka/"
+                        target="_blank"
+                    >
                         <button className="some-icon insta-icon">
                             <img
                                 src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png"

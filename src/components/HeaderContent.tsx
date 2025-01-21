@@ -27,9 +27,9 @@ const HeaderContent = () => {
                 Billetter
             </button>
             <button
-                className="headerButton disabled"
-                disabled={true}
-                onClick={() => navigate("")}
+                className="headerButton"
+                disabled={false}
+                onClick={() => navigate("/janne-statement")}
             >
                 Hilsen fra UKEsjefen
             </button>
