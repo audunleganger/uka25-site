@@ -10,6 +10,7 @@ import haavardImagePath from "../assets/board-images/haavard-avatar.jpg";
 import haakonImagePath from "../assets/board-images/haakon-avatar.jpg";
 import vetleImagePath from "../assets/board-images/vetle-avatar.jpg";
 import henrikImagePath from "../assets/board-images/henrik-avatar.jpg";
+
 function ContactPage() {
     return (
         <>

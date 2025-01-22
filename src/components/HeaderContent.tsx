@@ -1,7 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import logoBlackYellow from "../assets/icons/logo-sort-roed.png";
+import { usePage } from "../context/PageContext";
+
+const buttonsData = {
+    Program: "program",
+    Billetter: "https://billett.blindernuka.no/eventgroup/10",
+    "Hilsen fra UKEsjefen": "janne-statement",
+    Kontakt: "contact",
+};
 const HeaderContent = () => {
     const navigate = useNavigate();
+    const { currentPage } = usePage();
+
     return (
         <>
             <img
@@ -10,7 +20,26 @@ const HeaderContent = () => {
                 alt="UKA-logo"
                 onClick={() => navigate("/")}
             />
-            <button
+            {Object.entries(buttonsData).map(([text, link]) => (
+                <button
+                    key={text}
+                    className={`headerButton ${
+                        currentPage === link ? "current" : ""
+                    }`}
+                    disabled={currentPage === link}
+                    onClick={() => {
+                        if (link.startsWith("http")) {
+                            window.open(link, "_blank");
+                        } else {
+                            navigate(`/${link}`);
+                        }
+                    }}
+                >
+                    {text}
+                </button>
+            ))}
+            ;
+            {/* <button
                 className="headerButton"
                 disabled={false}
                 onClick={() => navigate("/program")}
@@ -33,20 +62,13 @@ const HeaderContent = () => {
             >
                 Hilsen fra UKEsjefen
             </button>
-            {/* <button
-                className="headerButton disabled"
-                disabled={true}
-                onClick={() => navigate("")}
-            >
-                Om UKA
-            </button> */}
             <button
                 className="headerButton"
                 disabled={false}
                 onClick={() => navigate("/contact")}
             >
                 Kontakt
-            </button>
+            </button> */}
         </>
     );
 };

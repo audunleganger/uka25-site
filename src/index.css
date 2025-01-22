@@ -17,6 +17,7 @@
     color: var(--color-uka-black);
     /* background-color: var(--color-uka-light-yellow); */
     background-color: var(--color-uka-light-yellow);
+    /* background-color: black; */
 }
 
 .hidden {
