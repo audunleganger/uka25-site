@@ -2,6 +2,7 @@ import HomePage from "./pages/HomePage";
 import ProgramPage from "./pages/ProgramPage";
 import ContactPage from "./pages/ContactPage";
 import ArtistsPage from "./pages/ArtistsPage";
+import RevyPage from "./pages/RevyPage";
 import { Route, Routes } from "react-router-dom";
 import TicketPage from "./pages/TicketPage";
 import JanneStatementPage from "./pages/JanneStatementPage";
@@ -38,6 +39,8 @@ function App() {
             setCurrentPage("tickets");
         } else if (path === "/janne-statement") {
             setCurrentPage("janne-statement");
+        } else if (path === "/revy") {
+            setCurrentPage("revy");
         }
     }, [location, setCurrentPage]);
 
@@ -62,6 +65,7 @@ function App() {
             <Route path="miniuka/artists/" element={<ArtistsPage />} />
             <Route path="/tickets/" element={<TicketPage />} />
             <Route path="/janne-statement/" element={<JanneStatementPage />} />
+            <Route path="/revy/" element={<RevyPage />} />
         </Routes>
     );
 }

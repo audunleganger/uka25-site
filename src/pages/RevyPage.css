@@ -1,0 +1,71 @@
+.actor-interview-section {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.statement-revysjef h1,
+.actor-interview-heading {
+    margin: 0 0 1rem 0;
+    text-align: center;
+    font-size: 4rem;
+    font-family: chantal-medium;
+    padding-top: 2rem;
+}
+
+.interview-question {
+    font-size: 1rem;
+    font-family: degular-bold;
+}
+
+.interview-answer {
+    padding-bottom: 0.5rem;
+}
+
+@media (max-width: 800px) {
+    .actor-interview-section > h1 {
+        font-size: 3rem;
+    }
+    .actor-interview-wrapper {
+        display: flex;
+        flex-flow: column-reverse;
+        align-items: center;
+        padding-bottom: 5rem;
+    }
+    .actor-headshot {
+        width: 60%;
+        height: 60%;
+        padding-right: 0;
+    }
+    .actor-interview {
+        width: 90%;
+    }
+}
+
+@media (min-width: 800px) {
+    .actor-interview-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 10% 0 10%;
+        align-items: center;
+    }
+    .actor-interview-wrapper {
+        display: flex;
+        padding-bottom: 3rem;
+    }
+    .actor-headshot {
+        width: 40%;
+        height: 40%;
+        padding-right: 2rem;
+    }
+    .actor-interview-wrapper:last-child:nth-child(odd) {
+        grid-column: span 2;
+        justify-content: center;
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .actor-interview {
+        margin: 0 auto;
+        width: 50%;
+        padding: 2rem;
+    }
+}

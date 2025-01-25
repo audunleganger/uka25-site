@@ -6,6 +6,7 @@ const buttonsData = {
     Program: "program",
     Billetter: "https://billett.blindernuka.no/eventgroup/10",
     "Hilsen fra UKEsjefen": "janne-statement",
+    Revy: "revy",
     Kontakt: "contact",
 };
 const HeaderContent = () => {
@@ -28,6 +29,7 @@ const HeaderContent = () => {
                     }`}
                     disabled={currentPage === link}
                     onClick={() => {
+                        console.log("navigate to", link);
                         if (link.startsWith("http")) {
                             window.open(link, "_blank");
                         } else {
@@ -39,36 +41,6 @@ const HeaderContent = () => {
                 </button>
             ))}
             ;
-            {/* <button
-                className="headerButton"
-                disabled={false}
-                onClick={() => navigate("/program")}
-            >
-                Program
-            </button>
-            <button
-                className="headerButton"
-                disabled={false}
-                onClick={() =>
-                    window.open("https://billett.blindernuka.no/eventgroup/10")
-                }
-            >
-                Billetter
-            </button>
-            <button
-                className="headerButton"
-                disabled={false}
-                onClick={() => navigate("/janne-statement")}
-            >
-                Hilsen fra UKEsjefen
-            </button>
-            <button
-                className="headerButton"
-                disabled={false}
-                onClick={() => navigate("/contact")}
-            >
-                Kontakt
-            </button> */}
         </>
     );
 };

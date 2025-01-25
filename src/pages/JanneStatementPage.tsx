@@ -1,4 +1,4 @@
-import "./JanneStatementPage.css";
+import "./statement-style.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import JannePicture from "../assets/board-images/janne-avatar.jpg";
@@ -6,10 +6,10 @@ const JanneStatementPage = () => {
     return (
         <div className="janne-statement-page">
             <Header />
-            <div className="janne-statement-content">
+            <div className="statement-wrapper">
                 <h1>Hilsen fra UKEsjefen </h1>
                 <img
-                    className="janne-photo"
+                    className="statement-photo"
                     src={JannePicture}
                     alt="UKEsjefen Janne Dahl Dimitrova"
                 />
@@ -61,11 +61,9 @@ const JanneStatementPage = () => {
                     Vi danses, synges og festes, og husk: Borte Bra, Blindern
                     best.
                 </p>
-                <p className="signature">
-                    Stor UKEhilsen fra,
-                    <br />
-                    Janne Dahl UKEsjef
-                </p>
+                <p className="signature">Stor UKEhilsen fra</p>
+                <p className="signature">Janne Dahl</p>
+                <p className="signature">UKEsjef</p>
             </div>
             <Footer />
         </div>

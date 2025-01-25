@@ -1,9 +1,8 @@
 .event-timeline {
-    margin-top: 3rem;
+    padding-top: 2rem;
     display: flex;
     flex-direction: row;
     overflow-x: auto;
-    white-space: nowrap;
     margin-bottom: 2rem;
 }
 

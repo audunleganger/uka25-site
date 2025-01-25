@@ -29,7 +29,14 @@
 }
 
 @media (max-width: 800px) {
-    .janne-statement-content {
-        width: 90%;
+    .statement-wrapper {
+        width: 100%;
+    }
+
+    .statement-wrapper > p {
+        padding: 0 1rem;
+    }
+    .statement-wrapper h1 {
+        font-size: 3rem;
     }
 }
