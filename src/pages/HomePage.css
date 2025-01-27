@@ -1,16 +1,15 @@
 .mainLogo {
     position: relative;
     margin: 0 auto;
-    width: 20vw;
+    width: 400px;
     display: block;
-    margin-top: 2rem;
+    padding-top: 2rem;
     margin-bottom: 2rem;
     -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3))
         drop-shadow(-1px -1px 1px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3))
         drop-shadow(-1px -1px 1px rgba(0, 0, 0, 0.3));
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 }
 
 .homePage {
@@ -37,7 +36,10 @@ iframe {
     padding: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+    .mainLogo {
+        width: 300px;
+    }
     .tree-spotify-wrapper {
         flex-direction: column;
         padding-right: 0;
