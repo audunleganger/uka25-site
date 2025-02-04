@@ -275,7 +275,7 @@ const EventTimeline: React.FC<EventTimelineProps> = ({ className }) => {
                 />
                 <Event
                     title="Revy: Når er grensa nådd? (kun for inviterte)"
-                    time="18:00"
+                    time="17:00"
                     location="Revyscenen"
                     ticketRequired={false}
                 />
